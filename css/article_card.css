@@ -1,0 +1,30 @@
+.recent-post-item:hover {
+  box-shadow: 0 0 0 3px #37a4ad !important;
+}
+.card-widget.card-info:hover {
+  box-shadow: 0 0 0 3px #37a4ad !important;
+}
+
+.card-widget.card-announcement:hover {
+  box-shadow: 0 0 0 3px #37a4ad !important;
+}
+
+.card-widget.card-recent-post:hover {
+  box-shadow: 0 0 0 3px #37a4ad !important;
+}
+
+.card-widget.card-categories:hover {
+  box-shadow: 0 0 0 3px #37a4ad !important;
+}
+
+.card-widget.card-tags:hover {
+  box-shadow: 0 0 0 3px #37a4ad !important;
+}
+
+.card-widget.card-archives:hover {
+  box-shadow: 0 0 0 3px #37a4ad !important;
+}
+
+.card-widget.card-webinfo:hover {
+  box-shadow: 0 0 0 3px #37a4ad !important;
+}
