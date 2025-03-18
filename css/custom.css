@@ -39,6 +39,23 @@
   color: #f2f2f2;
 }
 
+/* 文章置顶轮播 */
+[data-theme='light'] #recent-posts > .recent-post-item {
+  background: rgba(255, 255, 255, 0.9);
+}
+[data-theme='dark'] #recent-posts > .recent-post-item {
+  background: rgba(18, 18, 18, 0.8);
+}
+[data-theme='light'] {
+  --card-bg: rgba(255, 255, 255, 0.9);
+}
+[data-theme='dark'] {
+  --card-bg: rgba(18, 18, 18, 0.8);
+}
+div#swiper_container {
+  background: rgba(255, 255, 255, 0);
+}
+
 /* 翻页按钮居中 */
 #pagination {
   width: 100%;
@@ -68,4 +85,9 @@
 /* 这里的2是代表导航栏的第2个元素，即有子菜单的元素，可以按自己需求修改 */
 .menus_items .menus_item:nth-child(2) .menus_item_child {
   left: -125px;
+}
+
+/* 首页文章卡片 */
+#recent-posts > .recent-post-items > .recent-post-item {
+  min-height: 424px;
 }
