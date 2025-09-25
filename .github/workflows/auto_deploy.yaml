@@ -1,0 +1,27 @@
+name: ray-home # 项目名称
+on:
+  push:
+    branches:
+      - master # 自动部署触发方式：提交代码到master分支
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - name: Install and Build
+        run: |
+          npm install
+          npm run-script build
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.rayhome }} # 刚才配置的Repository secret，secrets后的名称与刚才配置的名称一致。
+          BRANCH: gh-pages # 目标分支
+          FOLDER: dist # 静态页面所在当前仓库的目录
+          REPOSITORY_NAME: Raysolid/Raysolid.github.io # 目标仓库
+          GIT_CONFIG_NAME: Raysolid # github用户名
+          GIT_CONFIG_EMAIL: y1515968124@gmail.com # github邮箱
+          CLEAN: true

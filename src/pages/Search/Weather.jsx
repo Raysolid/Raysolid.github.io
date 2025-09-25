@@ -38,7 +38,7 @@ const Weather = ({ cityName }) => {
       let cityName = (
         await axios.get('https://ipapi.co/json/')
       ).data.city.toLowerCase()
-      cityName = 'shenzhen'
+      // cityName = 'shenzhen'
       weatherData = await axios.get(
         `https://api.seniverse.com/v3/weather/now.json?key=${apiKey}&location=${cityName}&language=zh-Hans`
       )
