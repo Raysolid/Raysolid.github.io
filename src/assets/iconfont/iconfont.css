@@ -1,0 +1,143 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 4900894 */
+  src: url('iconfont.woff2?t=1747583513800') format('woff2'),
+       url('iconfont.woff?t=1747583513800') format('woff'),
+       url('iconfont.ttf?t=1747583513800') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-down:before {
+  content: "\e67a";
+}
+
+.icon-light-circle:before {
+  content: "\e60e";
+}
+
+.icon-close:before {
+  content: "\e766";
+}
+
+.icon-computer:before {
+  content: "\e622";
+}
+
+.icon-video:before {
+  content: "\e630";
+}
+
+.icon-yule:before {
+  content: "\e699";
+}
+
+.icon-study:before {
+  content: "\e6ae";
+}
+
+.icon-daohang:before {
+  content: "\e611";
+}
+
+.icon-up-circle:before {
+  content: "\e785";
+}
+
+.icon-setting:before {
+  content: "\e78e";
+}
+
+.icon-home:before {
+  content: "\e7c6";
+}
+
+.icon-manga:before {
+  content: "\e704";
+}
+
+.icon-label:before {
+  content: "\e706";
+}
+
+.icon-movie:before {
+  content: "\e6f8";
+}
+
+.icon-circle-home:before {
+  content: "\e8ce";
+}
+
+.icon-cat:before {
+  content: "\e600";
+}
+
+.icon-novel:before {
+  content: "\e6a9";
+}
+
+.icon-search:before {
+  content: "\e893";
+}
+
+.icon-shiyonggongju:before {
+  content: "\e614";
+}
+
+.icon-calendar_circle:before {
+  content: "\e63e";
+}
+
+.icon-dark-circle:before {
+  content: "\e68e";
+}
+
+.icon-game:before {
+  content: "\e6e9";
+}
+
+.icon-file-common:before {
+  content: "\e670";
+}
+
+.icon-time:before {
+  content: "\e680";
+}
+
+.icon-user:before {
+  content: "\e682";
+}
+
+.icon-arrow-left:before {
+  content: "\e685";
+}
+
+.icon-arrow-right:before {
+  content: "\e687";
+}
+
+.icon-movie1:before {
+  content: "\e6cc";
+}
+
+.icon-save:before {
+  content: "\e866";
+}
+
+.icon-tool:before {
+  content: "\e86f";
+}
+
+.icon-magic-line:before {
+  content: "\e8ab";
+}
+
+.icon-explore:before {
+  content: "\e9df";
+}
+

@@ -1,0 +1,199 @@
+[
+  {
+    "id": "zhannei",
+    "name": "站内",
+    "list": [
+      {
+        "id": "zhannei-cy",
+        "placeholder": "输入搜索关键字...",
+        "action": ""
+      }
+    ]
+  },
+  {
+    "id": "changyong",
+    "name": "常用",
+    "list": [
+      {
+        "id": "baidu-cy",
+        "name": "百度",
+        "placeholder": "百度一下",
+        "action": "https://www.baidu.com/s?wd="
+      },
+      {
+        "id": "google-cy",
+        "name": "Google",
+        "placeholder": "Google",
+        "action": "https://www.google.com/search?q="
+      },
+      {
+        "id": "bing-cy",
+        "name": "Bing",
+        "placeholder": "Bing",
+        "action": "https://cn.bing.com/search?q="
+      },
+      {
+        "id": "bilibili-cy",
+        "name": "哔哩哔哩",
+        "placeholder": "哔哩哔哩",
+        "action": "https://search.bilibili.com/all?keyword="
+      },
+      {
+        "id": "taobao-cy",
+        "name": "淘宝",
+        "placeholder": "淘宝",
+        "action": "https://s.taobao.com/search?q="
+      }
+    ]
+  },
+  {
+    "id": "sousuo",
+    "name": "搜索",
+    "list": [
+      {
+        "id": "bing-cy",
+        "name": "Bing",
+        "placeholder": "必应搜索",
+        "action": "https://cn.bing.com/search?q="
+      },
+      {
+        "id": "baidu-cy",
+        "name": "百度",
+        "placeholder": "百度一下",
+        "action": "https://www.baidu.com/s?wd="
+      },
+      {
+        "id": "sougou-cy",
+        "name": "搜狗",
+        "placeholder": "搜狗",
+        "action": "https://www.sogou.com/web?query="
+      },
+      {
+        "id": "360-cy",
+        "name": "360",
+        "placeholder": "360",
+        "action": "https://www.so.com/s?q="
+      },
+      {
+        "id": "google-cy",
+        "name": "Google",
+        "placeholder": "Google",
+        "action": "https://www.google.com/search?q="
+      },
+      {
+        "id": "yandex-cy",
+        "name": "Yandex",
+        "placeholder": "Yandex",
+        "action": "https://yandex.com/search/?text="
+      }
+    ]
+  },
+  {
+    "id": "gongju",
+    "name": "工具",
+    "list": [
+      {
+        "id": "github-cy",
+        "name": "Github",
+        "placeholder": "Github",
+        "action": "https://github.com/search?q="
+      },
+      {
+        "id": "gitee-cy",
+        "name": "Gitee",
+        "placeholder": "Gitee",
+        "action": "https://search.gitee.com/?skin=rec&type=repository&q="
+      },
+      {
+        "id": "ping-cy",
+        "name": "在线工具",
+        "placeholder": "请输入网址（不带https://）",
+        "action": "https://ping.chinaz.com/"
+      },
+      {
+        "id": "duotu-cy",
+        "name": "独特工具",
+        "placeholder": "独特工具",
+        "action": "https://www.dute.org/search?q="
+      },
+      {
+        "id": "wawa-cy",
+        "name": "蛙蛙工具",
+        "placeholder": "蛙蛙工具",
+        "action": "https://www.iamwawa.cn/search.html?q="
+      }
+    ]
+  },
+  {
+    "id": "shequ",
+    "name": "社区",
+    "list": [
+      {
+        "id": "zhihu-cy",
+        "name": "知乎",
+        "placeholder": "知乎",
+        "action": "https://www.zhihu.com/search?type=content&q="
+      },
+      {
+        "id": "weibo-cy",
+        "name": "微博",
+        "placeholder": "微博",
+        "action": "https://s.weibo.com/weibo/"
+      },
+      {
+        "id": "weixin-cy",
+        "name": "微信",
+        "placeholder": "微信",
+        "action": "https://weixin.sogou.com/weixin?type=2&query="
+      },
+      {
+        "id": "douban-cy",
+        "name": "豆瓣",
+        "placeholder": "豆瓣",
+        "action": "https://www.douban.com/search?q="
+      },
+      {
+        "id": "xiaohongshu-cy",
+        "name": "小红书",
+        "placeholder": "小红书",
+        "action": "https://www.xiaohongshu.com/search_result?keyword="
+      }
+    ]
+  },
+  {
+    "id": "shenghuo",
+    "name": "生活",
+    "list": [
+      {
+        "id": "taobao-cy",
+        "name": "淘宝",
+        "placeholder": "淘宝",
+        "action": "https://s.taobao.com/search?q="
+      },
+      {
+        "id": "jingdong-cy",
+        "name": "京东",
+        "placeholder": "京东",
+        "action": "https://search.jd.com/Search?keyword="
+      },
+      {
+        "id": "kuaidi100-cy",
+        "name": "快递100",
+        "placeholder": "快递100",
+        "action": "https://www.kuaidi100.com/?"
+      },
+      {
+        "id": "12306-cy",
+        "name": "12306",
+        "placeholder": "12306",
+        "action": "https://www.12306.cn/?"
+      },
+      {
+        "id": "douyin-cy",
+        "name": "抖音",
+        "placeholder": "抖音",
+        "action": "https://www.douyin.com/search/"
+      }
+    ]
+  }
+]

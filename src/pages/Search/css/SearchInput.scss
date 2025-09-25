@@ -1,0 +1,229 @@
+.search {
+  margin: 1.875rem auto 0;
+  padding-top: 1.5rem;
+  max-width: 800px;
+
+  /* 搜索框 */
+  .search-input {
+    position: relative;
+    padding: 9px 20px;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    backdrop-filter: blur(3px);
+    border-radius: 28px;
+
+    input {
+      padding: 0 6px;
+      width: 98%;
+      height: 32px;
+      color: #fff;
+      background: transparent;
+      font-size: 16px;
+      border: none;
+      outline: none;
+    }
+
+    button {
+      background-color: rgba(255, 255, 255, 0);
+    }
+
+    .icon-search {
+      position: absolute;
+      top: 0.8rem;
+      right: 1rem;
+      color: #fff;
+      font-size: 24px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+  }
+
+  .search-list {
+    position: relative;
+    margin: 1.25rem 0 0.625rem 0;
+    width: 100%;
+    height: 3.125rem;
+
+    .list-select {
+      &:nth-child(1):checked ~ .buttons label:nth-child(1) div,
+      &:nth-child(2):checked ~ .buttons label:nth-child(2) div,
+      &:nth-child(3):checked ~ .buttons label:nth-child(3) div,
+      &:nth-child(4):checked ~ .buttons label:nth-child(4) div,
+      &:nth-child(5):checked ~ .buttons label:nth-child(5) div,
+      &:nth-child(6):checked ~ .buttons label:nth-child(6) div {
+        color: rgba(255, 255, 255, 1);
+      }
+    }
+
+    .buttons {
+      position: relative;
+      display: flex;
+      justify-content: space-around;
+      gap: 14px;
+      padding: 1rem 11.6rem;
+      border-radius: 16px;
+      overflow: hidden;
+
+      label {
+        width: 4rem;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        border-radius: 16px;
+        font-size: 16px;
+        cursor: pointer;
+
+        div {
+          width: 3.75rem;
+          height: 1.875rem;
+          color: rgba(255, 255, 255, 0.7);
+          font-weight: 500;
+
+          &:hover {
+            color: rgba(255, 255, 255, 1);
+          }
+        }
+      }
+
+      .anchor {
+        width: 35px;
+        height: 4px;
+        background-color: #fff;
+        border-radius: 10px;
+        position: absolute;
+        top: 48px;
+        left: 197px;
+        transition: 0.3s;
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 35px;
+          height: 4px;
+          background-color: #fff;
+          border-radius: 14px;
+        }
+      }
+    }
+
+    input:nth-child(1):checked ~ .buttons .anchor {
+      left: 197px;
+    }
+
+    input:nth-child(2):checked ~ .buttons .anchor {
+      left: 272px;
+    }
+
+    input:nth-child(3):checked ~ .buttons .anchor {
+      left: 346px;
+    }
+
+    input:nth-child(4):checked ~ .buttons .anchor {
+      left: 420px;
+    }
+
+    input:nth-child(5):checked ~ .buttons .anchor {
+      left: 494px;
+    }
+
+    input:nth-child(6):checked ~ .buttons .anchor {
+      left: 568px;
+    }
+
+    .list-select {
+      visibility: hidden;
+      display: none;
+    }
+  }
+
+  /* 搜索框附选栏 */
+  .search-item {
+    position: relative;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 56px;
+
+    .search-group {
+      li {
+        .item-select:nth-child(1):checked ~ .buttons label:nth-child(1) div,
+        .item-select:nth-child(2):checked ~ .buttons label:nth-child(2) div,
+        .item-select:nth-child(3):checked ~ .buttons label:nth-child(3) div,
+        .item-select:nth-child(4):checked ~ .buttons label:nth-child(4) div,
+        .item-select:nth-child(5):checked ~ .buttons label:nth-child(5) div,
+        .item-select:nth-child(6):checked ~ .buttons label:nth-child(6) div {
+          color: rgba(255, 255, 255, 1);
+        }
+
+        .item-select:nth-child(1):checked ~ .buttons label:nth-child(1)::before,
+        .item-select:nth-child(2):checked ~ .buttons label:nth-child(2)::before,
+        .item-select:nth-child(3):checked ~ .buttons label:nth-child(3)::before,
+        .item-select:nth-child(4):checked ~ .buttons label:nth-child(4)::before,
+        .item-select:nth-child(5):checked ~ .buttons label:nth-child(5)::before,
+        .item-select:nth-child(6):checked
+          ~ .buttons
+          label:nth-child(6)::before {
+          border-color: rgba(0, 0, 0, 0.6) transparent;
+        }
+
+        .item-select:checked ~ .buttons {
+          label {
+            &::before {
+              content: '';
+              border-width: 8px 8px 0px 8px;
+              border-style: solid;
+              border-color: rgba(0, 0, 0, 0) transparent;
+              position: absolute;
+              left: 50%;
+              top: -15px;
+              margin-left: -8px;
+              transition: all 0.2s;
+            }
+          }
+        }
+
+        label {
+          div {
+            width: 60px;
+            height: 30px;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 500;
+
+            &:hover {
+              color: rgba(255, 255, 255, 1);
+            }
+          }
+        }
+
+        .item-select {
+          visibility: hidden;
+          display: none;
+        }
+      }
+
+      .buttons {
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        gap: 14px;
+        padding: 1rem 14rem;
+        border-radius: 16px;
+        overflow: hidden;
+
+        label {
+          position: relative;
+          width: 4rem;
+          height: 30px;
+          text-align: center;
+          line-height: 30px;
+          border-radius: 16px;
+          font-size: 14px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

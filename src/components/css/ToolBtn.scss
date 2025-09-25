@@ -1,0 +1,55 @@
+.tool-btn {
+  position: fixed;
+  bottom: 15vh;
+  right: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  animation: enter 0.5s ease-in-out;
+  z-index: 999;
+
+  .iconfont {
+    transition: all 0.2s ease;
+
+    &.show {
+      transform: translateX(0);
+    }
+
+    &.hide {
+      transform: translateX(150%);
+    }
+  }
+
+  .icon {
+    background: rgb(216, 216, 243, 0.3);
+    color: var(--backtop-color);
+    font-size: 38px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: var(--backtop-color);
+      color: var(--backtophover-color);
+      cursor: pointer;
+    }
+  }
+}
+
+.dark {
+  .tool-btn {
+    .icon {
+      &:hover {
+        border-color: var(--backtophover-color);
+      }
+    }
+  }
+}
+
+@keyframes enter {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,150 @@
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(87, 87, 87, 0.75) 0%,
+    rgba(112, 112, 112, 0.52) 50%,
+    rgba(132, 132, 132, 0.35) 100%
+  );
+  backdrop-filter: blur(15px);
+  overflow: hidden;
+  z-index: 1000;
+
+  /* 初始状态 */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), visibility 0.5s;
+
+  /* 进入动画状态 */
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* 退出动画状态 */
+  &.exiting {
+    opacity: 0;
+  }
+
+  .loading {
+    /* 定义变量 */
+    --ballSize: 1rem;
+    --containerSize: 18rem;
+    --n: 36;
+    --pdeg: calc(360deg / var(--n));
+    --ani-duration: 2000ms;
+
+    /* 样式属性 */
+    width: var(--containerSize);
+    height: var(--containerSize);
+    position: relative;
+    border-radius: 50%;
+
+    /* 修复小球可见性问题 */
+    overflow: visible;
+    perspective: 1000px;
+
+    /* 添加轻微模糊效果增强深度感 */
+    filter: blur(0.5px);
+
+    .dot {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: var(--ballSize);
+      height: var(--ballSize);
+      margin-left: calc(-1 * var(--ballSize) / 2);
+      margin-top: calc(-1 * var(--ballSize) / 2);
+      perspective: 70px;
+      transform-style: preserve-3d;
+      z-index: 10; /* 确保小球在顶部 */
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        backface-visibility: hidden; /* 修复3D渲染问题 */
+      }
+
+      &::before {
+        background-color: #000;
+        top: -100%;
+        animation: moveBlack var(--ani-duration) infinite;
+      }
+
+      &::after {
+        background-color: #fff;
+        top: 100%;
+        animation: moveWhite var(--ani-duration) infinite;
+      }
+    }
+
+    // 使用SCSS循环生成36个点的样式
+    @for $i from 1 through 36 {
+      .dot:nth-child(#{$i}) {
+        transform: rotate(calc(var(--pdeg) * #{$i}))
+          translateY(calc(-1 * var(--containerSize) / 2));
+
+        &::before,
+        &::after {
+          animation-delay: calc(
+            -1 * var(--ani-duration) / var(--n) * 6 * #{$i}
+          ) !important;
+        }
+      }
+    }
+  }
+}
+
+/* 将关键帧动画移到最外层确保生效 */
+@keyframes moveBlack {
+  0% {
+    animation-timing-function: ease-in;
+  }
+
+  25% {
+    transform: translate3d(0, 100%, var(--ballSize));
+    animation-timing-function: ease-out;
+  }
+
+  50% {
+    transform: translate3d(0, 200%, 0);
+    animation-timing-function: ease-in;
+  }
+
+  75% {
+    transform: translate3d(0, 100%, calc(-1 * var(--ballSize)));
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes moveWhite {
+  0% {
+    animation-timing-function: ease-in;
+  }
+
+  25% {
+    transform: translate3d(0, -100%, calc(-1 * var(--ballSize)));
+    animation-timing-function: ease-out;
+  }
+
+  50% {
+    transform: translate3d(0, -200%, 0);
+    animation-timing-function: ease-in;
+  }
+
+  75% {
+    transform: translate3d(0, -100%, var(--ballSize));
+    animation-timing-function: ease-out;
+  }
+}

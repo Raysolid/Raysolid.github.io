@@ -1,0 +1,17 @@
+.layout {
+  min-width: 1660px;
+  background-image: url(https://img.picgo.net/2025/03/16/wallhaven-x8gkpo5a2a1967a554df4a.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0.95;
+
+  .container {
+    margin: 5vh auto 0;
+    padding: 30px 0;
+    width: 90%;
+    // background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 15px;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,55 @@
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+  width: 100vw;
+  height: 6rem;
+
+  .nav-menu {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .nav-logo {
+      position: absolute;
+      top: -0.8rem;
+      left: 0;
+
+      img {
+        width: 8rem;
+        filter: brightness(100);
+        pointer-events: none;
+      }
+    }
+
+    .nav-user {
+      float: right;
+
+      .icon-user {
+        float: right;
+        color: #fff;
+        font-size: 2.125rem;
+
+        &:hover {
+          color: #ddd;
+        }
+      }
+
+      .icon-setting {
+        float: right;
+        margin: 0 1.2rem;
+        color: #fff;
+        font-size: 2.125rem;
+        cursor: pointer;
+        transition: 0.5s;
+
+        &:hover {
+          color: #ddd;
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+}

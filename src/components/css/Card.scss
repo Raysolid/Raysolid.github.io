@@ -1,0 +1,56 @@
+.card-body {
+  margin: 0.75rem 1.875rem;
+  padding: 0 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0 0.75rem;
+  height: 5.125rem;
+  background-color: var(--cardbody-color);
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+
+  &:hover {
+    transform: translate(0, -5px);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .card-logo {
+    padding: 0 0.5rem;
+    width: 54px;
+    height: 42px;
+    overflow: hidden;
+
+    img {
+      width: 38px;
+      height: 38px;
+    }
+  }
+
+  .card-info {
+    padding-right: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    max-width: 70%;
+
+    h3,
+    p {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    h3 {
+      font-size: 0.875rem;
+      color: var(--cardtitle-color);
+      transition: all 0.3s ease-in-out;
+    }
+
+    p {
+      flex: 1;
+      color: #666;
+      font-size: 0.75rem;
+    }
+  }
+}

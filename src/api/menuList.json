@@ -1,0 +1,32 @@
+[
+  {
+    "name": "主页",
+    "icon": "icon-home",
+    "path": "/"
+  },
+  {
+    "name": "常用站点",
+    "icon": "icon-file-common",
+    "path": "#commonWeb"
+  },
+  {
+    "name": "动漫区",
+    "icon": "icon-magic-line",
+    "path": "#Anime"
+  },
+  {
+    "name": "影视区",
+    "icon": "icon-movie",
+    "path": "#Movie"
+  },
+  {
+    "name": "游戏区",
+    "icon": "icon-game",
+    "path": "#Game"
+  },
+  {
+    "name": "探索发现",
+    "icon": "icon-tool",
+    "path": "#FunctionalTools"
+  }
+]

@@ -1,0 +1,176 @@
+.content-wrap {
+  gap: 10px;
+
+  .tab-title {
+    width: 100%;
+    height: 60px;
+
+    .icon-label {
+      display: inline-block;
+      font-size: 1.5rem;
+      margin: 1.25rem 0.625rem 1.5rem 1.875rem;
+      vertical-align: middle;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: var(--title-color);
+      transition: all 0.3s;
+    }
+  }
+
+  .tab-smalltitle {
+    margin-left: 1.875rem;
+    margin-top: 0.625rem;
+    padding-right: 0.625rem;
+    width: auto;
+    height: 1.875rem;
+    /* border: 2px solid #bbb; */
+    border-radius: 0.625rem;
+
+    .iconfont {
+      display: inline-block;
+      font-size: 1.25rem;
+      margin: 3px 6px 5px 10px;
+      vertical-align: middle;
+    }
+
+    h3 {
+      margin-right: 1.25rem;
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--title-color);
+      transition: all 0.3s;
+    }
+  }
+
+  .tab {
+    margin-bottom: 0.625rem;
+    width: 28.75rem;
+    height: 1.875rem;
+
+    .silder-menu {
+      margin: 0.3125rem 1.875rem;
+      width: 28.75rem;
+      height: 1.875rem;
+      border-radius: 1rem;
+      background-color: var(--sildermenu-color);
+      position: relative;
+      transition: all 0.3s;
+      z-index: 0;
+
+      input {
+        visibility: hidden;
+        display: none;
+
+        &:checked ~ .buttons label {
+          opacity: 1;
+        }
+
+        &:nth-child(1):checked ~ .buttons .block {
+          left: 0.9rem;
+        }
+
+        &:nth-child(2):checked ~ .buttons .block {
+          left: 5.4rem;
+        }
+
+        &:nth-child(3):checked ~ .buttons .block {
+          left: 10.1rem;
+        }
+
+        &:nth-child(4):checked ~ .buttons .block {
+          left: 14.7rem;
+        }
+
+        &:nth-child(5):checked ~ .buttons .block {
+          left: 19.4rem;
+        }
+
+        &:nth-child(6):checked ~ .buttons .block {
+          left: 24rem;
+        }
+      }
+
+      label div {
+        width: 3.75rem;
+        height: 1.875rem;
+        color: var(--title-color);
+      }
+
+      .block {
+        position: absolute;
+        left: 0.9375rem;
+        top: 0;
+        width: 3.75rem;
+        height: 1.875rem;
+        border-radius: 1rem;
+        transition: 0.5s;
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 3.75rem;
+          height: 1.875rem;
+          background-color: var(--silderhover-color);
+          border-radius: 0.875rem;
+          z-index: -1;
+        }
+      }
+    }
+
+    .buttons {
+      position: relative;
+      display: flex;
+      gap: 0.875rem;
+      padding: 0 0.875rem;
+      border-radius: 1rem;
+      overflow: hidden;
+
+      label {
+        width: 3.75rem;
+        height: 1.875rem;
+        text-align: center;
+        line-height: 1.875rem;
+        border-radius: 1rem;
+        font-size: 0.875rem;
+        cursor: pointer;
+        color: var(--title-color);
+      }
+    }
+  }
+}
+
+/* 显示，隐藏卡片内容样式 */
+.content {
+  .tab-content {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(264px, 1fr));
+    width: 100%;
+
+    @media screen and (max-width: 1580px) {
+      grid-template-columns: repeat(4, minmax(264px, 1fr));
+    }
+
+    @media screen and (max-width: 1200px) {
+      grid-template-columns: repeat(3, minmax(264px, 1fr));
+    }
+
+    @media screen and (max-width: 900px) {
+      grid-template-columns: repeat(2, minmax(264px, 1fr));
+    }
+
+    @media screen and (max-width: 650px) {
+      grid-template-columns: minmax(264px, 1fr);
+    }
+  }
+
+  .hide {
+    display: none;
+    width: 100%;
+  }
+}

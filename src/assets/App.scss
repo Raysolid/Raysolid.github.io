@@ -1,0 +1,79 @@
+:root {
+  --logo-color: #4c8df6ff;
+  --icon-color: #4c8df6ff;
+  --text-color: #707070;
+  --body-color: #f6f6f6;
+  --sidebar-color: #fff;
+  --primary-color: #695cfe;
+  --primary-color-light: #f6f5ff;
+  --title-color: #000;
+  --mainbg-color: #bcbcbc;
+  --sildermenu-color: rgba(0, 0, 0, 0.1);
+  --silderhover-color: rgb(111, 163, 245);
+  --cardbody-color: #fff;
+  --cardtitle-color: #000;
+  --backtop-color: #000;
+  --backtophover-color: #fff;
+  --cursor-color: rgba(0, 0, 0, 0.3);
+}
+
+/* 深色主题变量 */
+.dark {
+  --logo-color: brightness(10);
+  --icon-color: #ccc;
+  --text-color: #ccc;
+  --body-color: #202224;
+  --sidebar-color: #171717;
+  --primary-color: #3a3b3c;
+  --primary-color-light: #3a3b3c;
+  --title-color: #fff;
+  --mainbg-color: #0a0a21;
+  --sildermenu-color: #8f8f8f75;
+  --silderhover-color: rgb(165, 165, 165);
+  --cardbody-color: #2c2e2f;
+  --cardtitle-color: #c6c9cf;
+  --backtop-color: #ccc;
+  --backtophover-color: #000;
+  --cursor-color: rgba(255, 255, 255, 0.3);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f6f6f6;
+  transition: all 0.3s ease;
+
+  // 基础公共样式：清除默认样式的代码
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  // 滚动条样式
+  &::-webkit-scrollbar {
+    width: 6px;
+    background-color: #f6f6f6;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background-color: #bababa;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #6ba6ed;
+  }
+
+  // 隐藏水平滚动条
+  &::-webkit-scrollbar:horizontal {
+    height: 0;
+  }
+}

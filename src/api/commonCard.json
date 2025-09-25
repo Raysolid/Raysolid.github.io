@@ -1,0 +1,242 @@
+{
+  "title": "常用网站",
+  "name": "commonWeb",
+  "menuList": [
+    {
+      "id": "yingshi",
+      "name": "影视",
+      "active": true
+    },
+    {
+      "id": "gouwu",
+      "name": "购物",
+      "active": false
+    },
+    {
+      "id": "xuexi",
+      "name": "学习",
+      "active": false
+    },
+    {
+      "id": "wangpan",
+      "name": "网盘",
+      "active": false
+    },
+    {
+      "id": "youxiang",
+      "name": "邮箱",
+      "active": false
+    },
+    {
+      "id": "xinwen",
+      "name": "新闻",
+      "active": false
+    }
+  ],
+  "cardList": {
+    "yingshi": {
+      "children": [
+        {
+          "title": "哔哩哔哩",
+          "url": "https://www.bilibili.com/",
+          "icon": "https://www.bilibili.com/favicon.ico",
+          "description": "国内知名视频弹幕网站"
+        },
+        {
+          "title": "抖音",
+          "url": "https://www.douyin.com/",
+          "icon": "https://www.douyin.com/favicon.ico",
+          "description": "国内知名短视频平台"
+        },
+        {
+          "title": "腾讯视频",
+          "url": "https://v.qq.com/",
+          "icon": "https://v.qq.com/favicon.ico",
+          "description": "国内知名视频网站"
+        },
+        {
+          "title": "爱奇艺",
+          "url": "https://www.iqiyi.com/",
+          "icon": "https://www.iqiyi.com/favicon.ico",
+          "description": "国内知名视频网站"
+        },
+        {
+          "title": "优酷",
+          "url": "https://www.youku.com/",
+          "icon": "https://www.youku.com/favicon.ico",
+          "description": "国内知名视频网站"
+        }
+      ]
+    },
+    "gouwu": {
+      "children": [
+        {
+          "title": "淘宝",
+          "url": "https://www.taobao.com/",
+          "icon": "https://www.taobao.com/favicon.ico",
+          "description": "国内知名购物网站"
+        },
+        {
+          "title": "京东",
+          "url": "https://www.jd.com/",
+          "icon": "https://www.jd.com/favicon.ico",
+          "description": "国内知名购物网站"
+        },
+        {
+          "title": "天猫",
+          "url": "https://www.tmall.com/",
+          "icon": "https://www.tmall.com/favicon.ico",
+          "description": "国内知名购物网站"
+        },
+        {
+          "title": "苏宁易购",
+          "url": "https://www.suning.com/",
+          "icon": "https://www.suning.com/favicon.ico",
+          "description": "国内知名购物网站"
+        },
+        {
+          "title": "亚马逊",
+          "url": "https://www.amazon.cn/",
+          "icon": "https://www.amazon.com/favicon.ico",
+          "description": "国外知名购物网站"
+        }
+      ]
+    },
+    "xuexi": {
+      "children": [
+        {
+          "title": "菜鸟教程",
+          "url": "https://www.runoob.com/",
+          "icon": "https://www.runoob.com/favicon.ico",
+          "description": "免费学习编程的入门网站"
+        },
+        {
+          "title": "Github",
+          "url": "https://github.com/",
+          "icon": "https://github.com/favicon.ico",
+          "description": "一个面向开源及私有软件项目的托管平台"
+        },
+        {
+          "title": "CSDN",
+          "url": "https://www.csdn.net/",
+          "icon": "https://www.csdn.net/favicon.ico",
+          "description": "全球知名中文IT技术交流平台"
+        },
+        {
+          "title": "慕课网",
+          "url": "https://www.imooc.com/",
+          "icon": "https://www.imooc.com/favicon.ico",
+          "description": "IT编程技能学习平台"
+        },
+        {
+          "title": "力扣Leecode",
+          "url": "https://leetcode.cn/",
+          "icon": "https://leetcode.cn/favicon.ico",
+          "description": "面试刷题的技术成长平台"
+        }
+      ]
+    },
+    "wangpan": {
+      "children": [
+        {
+          "title": "阿里云盘",
+          "url": "https://www.aliyundrive.com/",
+          "icon": "https://www.aliyundrive.com/favicon.ico",
+          "description": "不限速"
+        },
+        {
+          "title": "夸克网盘",
+          "url": "https://pan.quark.cn/",
+          "icon": "https://pan.quark.cn/favicon.ico",
+          "description": "不限速，会员离线下载"
+        },
+        {
+          "title": "蓝奏云",
+          "url": "https://www.lanzou.com/",
+          "icon": "https://www.lanzou.com/favicon.ico",
+          "description": "不限速，分享小文件首选"
+        },
+        {
+          "title": "迅雷云盘",
+          "url": "https://pan.xunlei.com/",
+          "icon": "https://pan.xunlei.com/icon.png",
+          "description": "迅雷会员推荐使用"
+        },
+        {
+          "title": "百度云盘",
+          "url": "https://pan.baidu.com/",
+          "icon": "https://nd-static.bdstatic.com/m-static/v20-main/favicon-main.ico",
+          "description": "非会员不建议使用"
+        }
+      ]
+    },
+    "youxiang": {
+      "children": [
+        {
+          "title": "QQ邮箱",
+          "url": "https://mail.qq.com/",
+          "icon": "https://mail.qq.com/favicon.ico",
+          "description": "为亿万用户提供高效稳定便捷的电子邮件服务"
+        },
+        {
+          "title": "163邮箱",
+          "url": "https://mail.163.com/",
+          "icon": "https://mail.163.com/favicon.ico",
+          "description": "网易旗下中文邮箱第一品牌"
+        },
+        {
+          "title": "新浪邮箱",
+          "url": "https://mail.sina.com.cn/",
+          "icon": "https://mail.sina.com.cn/favicon.ico",
+          "description": "提供以@sina.com和@sina.cn为后缀的邮箱服务"
+        },
+        {
+          "title": "126邮箱",
+          "url": "https://mail.126.com/",
+          "icon": "https://mail.126.com/favicon.ico",
+          "description": "你的专业电子邮局"
+        },
+        {
+          "title": "Gmail",
+          "url": "https://mail.google.com/",
+          "icon": "https://img.picgo.net/2025/04/17/gmail-logo74a5a04e0b793b61.jpeg",
+          "description": "Google旗下的免费网络邮件服务"
+        }
+      ]
+    },
+    "xinwen": {
+      "children": [
+        {
+          "title": "人民网",
+          "url": "http://www.people.com.cn/",
+          "icon": "https://www.people.com.cn/favicon.ico",
+          "description": "世界十大报纸之一《人民日报》建设..."
+        },
+        {
+          "title": "网易新闻",
+          "url": "https://news.163.com/",
+          "icon": "https://www.163.com/favicon.ico",
+          "description": "提供时政新闻,国内新闻,国际新闻,社会..."
+        },
+        {
+          "title": "央视网",
+          "url": "https://www.cctv.com/",
+          "icon": "https://www.cctv.com/favicon.ico",
+          "description": "由中央广播电视总台主办的中央重点..."
+        },
+        {
+          "title": "腾讯新闻",
+          "url": "https://www.qq.com/",
+          "icon": "https://img.picgo.net/2025/04/17/favicond62f7775dded259e.png",
+          "description": "集新闻信息,区域垂直生活服务、社会化..."
+        },
+        {
+          "title": "今日头条",
+          "url": "https://www.toutiao.com/",
+          "icon": "https://www.toutiao.com/favicon.ico",
+          "description": "基于数据挖掘的推荐引擎产品，致力于..."
+        }
+      ]
+    }
+  }
+}

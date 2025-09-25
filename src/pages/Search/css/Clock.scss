@@ -1,0 +1,35 @@
+.nav-time {
+  margin: 0 auto;
+  padding: 0.625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(3px);
+  color: #fff;
+  border-radius: 6px;
+  user-select: none;
+
+  @font-face {
+    font-family: 'FX-LED';
+    src: url('/src/assets/bookmark/FX-LED.TTF');
+  }
+
+  .time {
+    font-family: 'FX-LED';
+    display: flex;
+    gap: 0 0.25rem;
+  }
+
+  .hour,
+  .min,
+  .dot {
+    display: inline-block;
+    font-size: 3.5rem;
+  }
+
+  .invisible {
+    opacity: 0;
+  }
+}

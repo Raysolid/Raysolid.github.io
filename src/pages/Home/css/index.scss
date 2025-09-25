@@ -1,0 +1,18 @@
+.home-container {
+  display: flex;
+  width: 100%;
+  background-color: var(--body-color);
+  color: var(--text-color);
+
+  .content {
+    --side-menu-width: 80px;
+
+    flex: 1;
+    max-width: calc(100% - var(--side-menu-width));
+    transition: all 0.3s ease;
+
+    &.open {
+      --side-menu-width: 250px;
+    }
+  }
+}

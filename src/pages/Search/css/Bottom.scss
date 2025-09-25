@@ -1,0 +1,47 @@
+.bottom {
+  position: relative;
+
+  /* 今日诗词 */
+  .gushi {
+    display: flex;
+    justify-content: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3), 0 0 8px rgba(0, 0, 0, 0.2);
+
+    .jinrishici {
+      display: block;
+      margin: 0 auto;
+      padding: 5px;
+      color: #fff;
+      font-size: 20px;
+      background: linear-gradient(220.55deg, #ffed46 0%, #ff7ec7 100%) no-repeat
+        right bottom;
+      background-size: 0px 2px;
+      transition: background-size 0.5s;
+      cursor: pointer;
+
+      /* 鼠标悬浮时，文字下划线效果 */
+      &:hover {
+        background-position: left bottom;
+        background-size: 100% 2px;
+      }
+    }
+  }
+
+  .copyright-text {
+    height: 50px;
+    color: #f8f9fa !important;
+    text-align: center;
+    line-height: 50px;
+    font-size: 12px;
+    user-select: none;
+
+    a {
+      color: #f8f9fa !important;
+      opacity: 0.8;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
