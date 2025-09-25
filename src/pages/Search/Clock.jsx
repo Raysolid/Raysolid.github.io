@@ -1,4 +1,4 @@
-import './css/clock.scss'
+import './css/Clock.scss'
 import { useState, useEffect } from 'react'
 
 const Clock = () => {
