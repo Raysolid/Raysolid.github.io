@@ -1,0 +1,93 @@
+/* 页脚与头图透明 */
+#footer {
+  background: transparent !important;
+}
+#page-header {
+  background: transparent !important;
+}
+
+/* 白天模式遮罩透明 */
+#footer::before {
+  background: transparent !important;
+}
+#page-header::before {
+  background: transparent !important;
+}
+
+/* 夜间模式遮罩透明 */
+[data-theme='dark'] #footer::before {
+  background: transparent !important;
+}
+[data-theme='dark'] #page-header::before {
+  background: transparent !important;
+}
+
+/* 小冰分类分类磁铁黑夜模式适配 */
+/* 一般状态 */
+[data-theme='dark'] .magnet_item {
+  background: #1e1e1e;
+  border-radius: 8px !important;
+  overflow: hidden;
+}
+[data-theme='dark'] .magnet_link_context {
+  background: #1e1e1e;
+  color: antiquewhite;
+}
+/* 鼠标悬浮状态 */
+[data-theme='dark'] .magnet_link_context:hover {
+  background: #2fb0df;
+  color: #f2f2f2;
+}
+
+/* 文章置顶轮播 */
+[data-theme='light'] #recent-posts > .recent-post-item {
+  background: rgba(255, 255, 255, 0.9);
+}
+[data-theme='dark'] #recent-posts > .recent-post-item {
+  background: rgba(18, 18, 18, 0.8);
+}
+[data-theme='light'] {
+  --card-bg: rgba(255, 255, 255, 0.9);
+}
+[data-theme='dark'] {
+  --card-bg: rgba(18, 18, 18, 0.8);
+}
+div#swiper_container {
+  background: rgba(255, 255, 255, 0);
+}
+
+/* 翻页按钮居中 */
+#pagination {
+  width: 100%;
+  margin: auto;
+}
+
+/* 菜单背景色 */
+[data-theme='dark'] #page-header.nav-fixed > #nav {
+  background: transparent !important;
+}
+/* 菜单文字颜色 */
+[data-theme='light'] {
+  --font-color: #333 !important;
+}
+
+/* 一级菜单居中 */
+#nav .menus_items {
+  position: absolute !important;
+  width: fit-content !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+/* 子菜单横向展示 */
+#nav .menus_items .menus_item:hover .menus_item_child {
+  display: flex !important;
+}
+/* 这里的2是代表导航栏的第2个元素，即有子菜单的元素，可以按自己需求修改 */
+.menus_items .menus_item:nth-child(2) .menus_item_child {
+  left: -125px;
+}
+
+/* 首页文章卡片 */
+#recent-posts > .recent-post-items > .recent-post-item {
+  min-height: 424px;
+}

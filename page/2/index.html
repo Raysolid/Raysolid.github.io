@@ -1,0 +1,230 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Ray - 学无止境，景无边际</title><meta name="author" content="Ray"><meta name="copyright" content="Ray"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="分享学习心得，记录生活点滴。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ray">
+<meta property="og:url" content="https://raysolid.github.io/page/2/index.html">
+<meta property="og:site_name" content="Ray">
+<meta property="og:description" content="分享学习心得，记录生活点滴。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img.rongyuejiaoyu.com/uploads/20240728/02511242750.jpeg">
+<meta property="article:author" content="Ray">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img.rongyuejiaoyu.com/uploads/20240728/02511242750.jpeg"><link rel="shortcut icon" href="https://github.githubassets.com/favicons/favicon.svg"><link rel="canonical" href="https://raysolid.github.io/page/2/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":230,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":30,"languages":{"author":"作者: Ray","link":"链接: ","source":"来源: Ray","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"已切换为繁体中文","cht_to_chs":"已切换为简体中文","day_to_night":"已切换为深色模式","night_to_day":"已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"top-right"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Ray',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="/css/article_card.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-image: url(https://img.picgo.net/2025/03/16/wallhaven-x8gkpo5a2a1967a554df4a.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.rongyuejiaoyu.com/uploads/20240728/02511242750.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">14</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder"></i><span> 分类</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Ray</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder"></i><span> 分类</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">Ray</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/Raysolid" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:y1515968124@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc masonry" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover"><a href="/2024/12/01/7-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" title="7-操作系统"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.bitiful.net/img/default_cover_251.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="7-操作系统"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/12/01/7-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" title="7-操作系统">7-操作系统</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-12-01T02:16:35.000Z" title="发表于 2024-12-01 10:16:35">2024-12-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BD%AF%E8%80%83/">软考</a></span></div><div class="content">7. 操作系统 - 软件设计师  编辑程序、汇编程序、编译程序、数据库管理系统等系统软件和应用软件都是建立在操作系统基础上的  进程管理（处理机管理）： 前趋图是一个有向无循环图，由结点和有向边构成，结点代表各程序段的操作，而结点间的有向边表示两个程序段操作之间存在的前趋关系。（输入是计算的前趋，计算是输入的后继） 123graph LRA((输入))--&gt;B((计算))B((计算))--&gt;C((输出)) 程序顺序执行的特征：顺序性、封闭性、可再现性   如何确定 S~n~对应哪条有向边： P~1~P~2~ → 12 P~1~P~3~ → 13 P~2~P~3~ → 23 P~3~P~4~ → 34 根据 12 &gt; 13 &gt; 23 &gt; 34，可得 P~1~P~2~ → S1 P~1~P~3~ → S2 P~2~P~3~ → S3 P~3~P~4~ → S4  程序并发执行的特征：  失去了程序的封闭性 程序和机器的执行程序的活动不再一一对应 并发程序间的相互制约性    图 4-2 中，I~2~与 C~1~并行执行；I~3~、C~2~与...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2024/12/01/6-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" title="6-设计模式"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic3.zhimg.com/v2-6da72d2f835a2790fc5e597a6ab50630_1440w.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="6-设计模式"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/12/01/6-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" title="6-设计模式">6-设计模式</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-12-01T01:03:24.000Z" title="发表于 2024-12-01 09:03:24">2024-12-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BD%AF%E8%80%83/">软考</a></span></div><div class="content">6. 设计模式 - 软件设计师目的：  创建型模式：与对象的创建有关 结构型模式：处理类或对象的组合 行为型模式：对类或对象怎样交互和怎样分配职责进行描述  分类：  简单工厂模式：定义一个工厂类，它可以根据参数的不同返回不同类的实例，被创建的实例通常都具有共同的父类 在简单工厂模式中用于被创建实例的方法通常为静态方法（static），因此又称为静态工厂方法  工厂（核心）：负责实现创建所有产品的内部逻辑，工厂类可以被外界直接调用，创建所需对象 封装产品：工厂类所创建的所有对象的父类，封装了产品对象的公共方法，所有的具体产品为其子类对象 具体产品：简单工厂模式的创建目标，所有被创建的对象都是某个具体类的实例，它要实现抽象产品中声明的抽象方法  12345678910111213141516classDiagram	Product &lt;|-- ProductA	Product &lt;|-- ProductB	ProductA &lt;-- Factory	ProductB &lt;-- Factory	note for Product &quot;&lt;&lt;...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2024/11/29/5-UML/" title="5-UML"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.bitiful.net/img/default_cover_168.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="5-UML"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/11/29/5-UML/" title="5-UML">5-UML</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-11-29T11:12:30.000Z" title="发表于 2024-11-29 19:12:30">2024-11-29</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BD%AF%E8%80%83/">软考</a></span></div><div class="content">5. UML - 软件设计师事物：对模型中最具有代表性的成分的抽象  结构事物   行为事物  交互  状态机  活动     分组事物  是 UML 模型的组织部分 最主要的分组事物是包   注释事物  是 UML 模型的解释部分  注解是一种主要的注释事物      关系：把事物结合在一起  依赖：一个事物（独立事物）发生变化会影响另一个事物（依赖事物）   关联：一种结构关系，描述了一组链，链是对象之间的连接 关联上可以标注重复度（多重度）和角色  多重度：一个类的实例能够与另一个类的多少个实例相关联  聚合：部分和整体的生命周期不一致，整体消失，部分仍然存在，部分可以脱离整体存在  组合：部分和整体的生命周期一致，整体消失，部分也存在，部分不可以脱离整体而存在    图中交叉关联：1 个雇主对应 0 个或多个员工，1 个员工对应 0 个或 1...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2024/11/28/4-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" title="4-面向对象"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic4.zhimg.com/v2-22cdf76b5bd4f14725ee854e0680cce7_1440w.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="4-面向对象"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/11/28/4-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" title="4-面向对象">4-面向对象</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-11-28T09:15:23.000Z" title="发表于 2024-11-28 17:15:23">2024-11-28</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BD%AF%E8%80%83/">软考</a></span></div><div class="content">4. 面向对象 - 软件设计师类：  实体类 接口类（边界类） 控制类  对象的组成：对象名、属性（状态）、操作（方法） 消息：对象之间进行通信的一种构造，例：向对象发送消息 → 对象名.方法名(参数) 封装：是一种信息隐藏技术，其目的是使对象的使用者和生产者分离 多态：不同的对象收到同一消息可以产生完全不同的结果  通用的 参数多态：应用比较广泛，称为最纯的多态 包含多态：子类型化，即一个类型是另一个类型的子类型   特定的  过载多态：同一个名字在不同的上下文中所代表的含义不同 强制多态：强制类型转换   静态绑定：编译时进行  动态绑定：运行时进行  面向对象设计的原则：  单一责任原则：仅有一个引起它变化的原因 开放-封闭原则：可拓展的（开放），不可修改的（封闭） 里氏替换原则：任何基类（父类）出现的地方，子类一定可以出现 依赖倒置原则：依赖于抽象，而不依赖于细节（实现） →...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2024/11/28/3-%E6%95%B0%E6%8D%AE%E5%BA%93/" title="3-数据库"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic1.zhimg.com/v2-d29fce2ed5ae483b04c64f4cee7e5a2e_r.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="3-数据库"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/11/28/3-%E6%95%B0%E6%8D%AE%E5%BA%93/" title="3-数据库">3-数据库</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-11-28T07:32:05.000Z" title="发表于 2024-11-28 15:32:05">2024-11-28</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BD%AF%E8%80%83/">软考</a></span></div><div class="content">3. 数据库 - 软件设计师两个实体型之间的联系：  一对一联系（$1:1$） 一对多联系（$1:n$） 多对多联系（$m:n$）  关系模型：采用二维表格结构表达实体类型及实体间联系的数据模型 属性：  简单属性和复合属性 复合属性可以拆分成多个属性   单值属性和多值属性 多值属性可能对应一组值：职工可能有多个亲属   NULL 属性 表示某个属性上没有值或属性值未知   派生属性 派生属性可由其他属性得来：通过生日和当前时间得出年龄    概念模式 → 基本表 外模式 → 视图 内模式 → 存储文件  为了保证数据的物理独立性，需要修改概念模式和内模式之间的映像 为了保证数据的逻辑独立性，需要修改外模式和概念模式之间的映像   关系的并：关系 R 和关系 S 的所有元组合并，再删去重复的元组，组成一个新关系 关系的差：关系 R 和关系 S 的差是由属于 R 而不属于 S 的所有元组组成的集合，即关系 R 中删去与关系 S 中相同的元组 关系的交：关系 R 和关系 S 的交是由既属于 R 又属于 S 的元组组成的集合，即在两个关系 R 与 S...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2024/11/26/2-%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83/" title="2-知识产权"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic2.zhimg.com/v2-f6c07d54e218802e9a79efc40b753d07_1440w.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2-知识产权"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/11/26/2-%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83/" title="2-知识产权">2-知识产权</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-11-26T15:52:51.000Z" title="发表于 2024-11-26 23:52:51">2024-11-26</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BD%AF%E8%80%83/">软考</a></span></div><div class="content">2. 知识产权 - 软件设计师 工业产权（专利、商标） 著作权（不限期） 人身权（发表权、署名权、修改权、保护作品完整权） 财产权    计算机软件著作权：《中华人民共和国著作权法》和《计算机软件保护条例》  计算机程序：源程序、目标程序 计算机软件的文档：程序设计说明书、流程图、用户手册等  职务软件作品，受雇人员享有署名权，企业公司享有著作权 委托开发软件著作权的归属：  根据签订书面合同约定 若无合同，则著作权由受委托人享有  商业秘密权：对软件的技术信息、经营信息提供保护 专利权：有两人以上时，先申请人先获得；若同时申请，则协商确定一个 商标权：保护期限可以延长 商标注册：先注册先得；同一天注册，先使用先得，若都没使用过则协商 </div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#content-inner">3</a><a class="extend next" rel="next" href="/page/3/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.rongyuejiaoyu.com/uploads/20240728/02511242750.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Ray</div><div class="author-info-description">分享学习心得，记录生活点滴。</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">14</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Raysolid"><i class="fab fa-github"></i><span>前往Github</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/Raysolid" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:y1515968124@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎光临，如果能帮助到你是我荣幸，请给我一个Star！</div></div><div class="sticky_layout"><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">13</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-10-23T05:46:20.219Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By Ray</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('https://cdn.jsdelivr.net/npm/typed.js/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  },
+  processSubtitle: (content, extraContents = []) => {
+    if (true) {
+      const sub = [].slice()
+
+      if (extraContents.length > 0) {
+        sub.unshift(...extraContents)
+      }
+
+      if (typeof content === 'string') {
+        sub.unshift(content)
+      } else if (Array.isArray(content)) {
+        sub.unshift(...content)
+      }
+
+      sub.length > 0 && typedJSFn.init(sub)
+    } else {
+      document.getElementById('subtitle').textContent = typeof content === 'string' ? content :
+        (Array.isArray(content) && content.length > 0 ? content[0] : '')
+    }
+  }
+}
+btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
+</script><script>function subtitleType () {
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      const from = '出自 ' + data.from
+      typedJSFn.processSubtitle(data.hitokoto, [from])
+    })
+    .catch(err => {
+      console.error('Failed to get the Hitokoto API:', err)
+      typedJSFn.processSubtitle([])
+    })
+}
+typedJSFn.run(subtitleType)
+</script></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="30" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div><!-- hexo injector body_end start --> <script data-pjax>if(document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+    var parent = document.getElementById('recent-posts');
+    var child = '<div class="recent-post-item" style="width:100%;height: auto"><div id="catalog_magnet"><div class="magnet_item"><a class="magnet_link" href="https://raysolid.github.io/categories/软考/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🎓 软件设计师笔记 (13)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item" style="visibility: hidden"></div><a class="magnet_link_more"  href="https://raysolid.github.io/categories" style="flex:1;text-align: center;margin-bottom: 10px;">查看更多...</a></div></div>';
+    console.log('已挂载magnet')
+    parent.insertAdjacentHTML("afterbegin",child)}
+     </script><style>#catalog_magnet{flex-wrap: wrap;display: flex;width:100%;justify-content:space-between;padding: 10px 10px 0 10px;align-content: flex-start;}.magnet_item{flex-basis: calc(50% - 5px);background: #f2f2f2;margin-bottom: 10px;border-radius: 8px;transition: all 0.2s ease-in-out;}.magnet_item:hover{background: #49b1f5}.magnet_link_more{color:#555}.magnet_link{color:black}.magnet_link:hover{color:white}@media screen and (max-width: 600px) {.magnet_item {flex-basis: 100%;}}.magnet_link_context{display:flex;padding: 10px;font-size:16px;transition: all 0.2s ease-in-out;}.magnet_link_context:hover{padding: 10px 20px;}</style>
+    <style></style><script data-pjax>
+  function butterfly_swiper_injector_config(){
+    var parent_div_git = document.getElementById('recent-posts');
+    var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2024/12/01/6-设计模式/" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic3.zhimg.com/v2-6da72d2f835a2790fc5e597a6ab50630_1440w.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2024-12-01</span><a class="blog-slider__title" href="2024/12/01/6-设计模式/" alt="">6-设计模式</a><div class="blog-slider__text">设计模式相关考点（重点）</div><a class="blog-slider__button" href="2024/12/01/6-设计模式/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2024/12/05/12-数据结构/" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic2.zhimg.com/v2-f6c07d54e218802e9a79efc40b753d07_1440w.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2024-12-05</span><a class="blog-slider__title" href="2024/12/05/12-数据结构/" alt="">12-数据结构</a><div class="blog-slider__text">数据结构相关考点（重点）</div><a class="blog-slider__button" href="2024/12/05/12-数据结构/" alt="">详情   </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载butterfly_swiper')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'undefined'.split(',');
+  var cpage = location.pathname;
+  var epage = '/';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_swiper_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_swiper_injector_config();
+  }
+  </script><script defer src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js"></script><!-- hexo injector body_end end --></body></html>

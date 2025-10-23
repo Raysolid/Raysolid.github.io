@@ -1,0 +1,617 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>9-软件工程 | Ray</title><meta name="author" content="Ray"><meta name="copyright" content="Ray"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="软件工程相关考点">
+<meta property="og:type" content="article">
+<meta property="og:title" content="9-软件工程">
+<meta property="og:url" content="https://raysolid.github.io/2024/12/03/9-%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/index.html">
+<meta property="og:site_name" content="Ray">
+<meta property="og:description" content="软件工程相关考点">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://sourcebucket.s3.bitiful.net/img/default_cover_233.webp">
+<meta property="article:published_time" content="2024-12-03T05:01:06.000Z">
+<meta property="article:modified_time" content="2025-03-17T13:43:28.387Z">
+<meta property="article:author" content="Ray">
+<meta property="article:tag" content="软考">
+<meta property="article:tag" content="软件工程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://sourcebucket.s3.bitiful.net/img/default_cover_233.webp"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "9-软件工程",
+  "url": "https://raysolid.github.io/2024/12/03/9-%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/",
+  "image": "https://sourcebucket.s3.bitiful.net/img/default_cover_233.webp",
+  "datePublished": "2024-12-03T05:01:06.000Z",
+  "dateModified": "2025-03-17T13:43:28.387Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Ray",
+      "url": "https://raysolid.github.io/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="https://github.githubassets.com/favicons/favicon.svg"><link rel="canonical" href="https://raysolid.github.io/2024/12/03/9-%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":230,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":30,"languages":{"author":"作者: Ray","link":"链接: ","source":"来源: Ray","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"已切换为繁体中文","cht_to_chs":"已切换为简体中文","day_to_night":"已切换为深色模式","night_to_day":"已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"top-right"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '9-软件工程',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="/css/article_card.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-image: url(https://img.picgo.net/2025/03/16/wallhaven-x8gkpo5a2a1967a554df4a.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.rongyuejiaoyu.com/uploads/20240728/02511242750.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">14</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder"></i><span> 分类</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://sourcebucket.s3.bitiful.net/img/default_cover_233.webp);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Ray</span></a><a class="nav-page-title" href="/"><span class="site-name">9-软件工程</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder"></i><span> 分类</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">9-软件工程</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-12-03T05:01:06.000Z" title="发表于 2024-12-03 13:01:06">2024-12-03</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-17T13:43:28.387Z" title="更新于 2025-03-17 21:43:28">2025-03-17</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%BD%AF%E8%80%83/">软考</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h2 id="9-软件工程-软件设计师"><a href="#9-软件工程-软件设计师" class="headerlink" title="9. 软件工程 - 软件设计师"></a>9. 软件工程 - 软件设计师</h2><p><strong>软件过程</strong>：</p>
+<ul>
+<li><p>能力成熟度模型（CMM）</p>
+<ol>
+<li><p>初始级（Initial）</p>
+<p>软件过程的特点是杂乱无章，有时甚至很混乱，几乎没有明确定义的步骤，项目的成功完全依赖个人的努力和英雄式核心人物的作用</p>
+</li>
+<li><p>可重复级（Repeatable）</p>
+<p>建立了基本的项目管理过程和实践来跟踪项目费用、进度和功能特性，有必要的过程准则来重复以前在同类项目中的成功</p>
+</li>
+<li><p>已定义级（Defined）</p>
+<p>管理和工程两方面的软件过程已经文档化、标准化，并综合成整个软件开发组织的标准软件过程。所有项目都采用根据实际情况修改后得到的标准软件过程来开发和维护软件</p>
+</li>
+<li><p>已管理级（Managed）</p>
+<p>制定了软件过程和产品质量的详细度量标准。软件过程的产品质量都被开发组织的成员所理解和控制</p>
+</li>
+<li><p>优化级（Optimized）</p>
+<p>加强了定量分析，通过来自过程质量反馈和来自新观念、新技术的反馈使过程能不断持续地改进</p>
+</li>
+</ol>
+</li>
+<li><p>能力成熟度模型集成（CMMI）</p>
+<ol>
+<li>阶段式模型<ul>
+<li>初始的：过程不可预测且缺乏控制</li>
+<li>已管理的：过程为项目服务</li>
+<li>已定义的：过程为组织服务</li>
+<li>定量管理的：过程已度量和控制</li>
+<li>优化的：集中于过程改进</li>
+</ul>
+</li>
+<li>连续式模型<ul>
+<li>CL~0~（未完成的）：过程域未执行或未得到 CL~1~中定义的所有目标</li>
+<li>CL~1~（已执行的）：其共性目标是过程将可标识的输入工作产品转换成可标识的输出工作产品，以实现支持过程域的特定目标</li>
+<li>CL~2~（已管理的）：其共性目标集中于已管理的过程的制度化</li>
+<li>CL~3~（已定义级的）：其共性目标集中于已定义的过程的制度化</li>
+<li>CL~4~（定量管理的）：其共性目标集中于可定量管理的过程的制度化</li>
+<li>CL~5~（优化的）：使用量化（统计学）手段改变和优化过程域，以满足客户要求的改变和持续改进计划中的过程域的功效</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<p><strong>软件过程模型</strong>：</p>
+<ul>
+<li><p>瀑布模型：需求明确/不发生变化，具备相关领域及类似规模系统的开发经验</p>
+<ul>
+<li>优点：容易理解，管理成本低；强调开发的阶段性早期计划及需求调查和产品测试</li>
+<li>V 模型：瀑布模型的一个变体</li>
+</ul>
+</li>
+<li><p>增量模型：能够快速构造可运行产品，根据后续增量加入新功能，是瀑布模型的一个变体</p>
+<ul>
+<li>优点：具有瀑布模型的所有优点；第一个可交付版本所需成本和时间很少；开发由增量表示的小系统所承担的风险不大；运行增量投资</li>
+</ul>
+</li>
+<li><p>演化模型：迭代的过程模型，尽快投入使用，逐步开发出完整的软件版本，适用于对软件需求缺乏准确认识的情况</p>
+<ul>
+<li>原型模型：用户需求不清、需求经常变化；系统规模不大、不复杂；能快速、低成本地构建原型</li>
+<li>螺旋模型：适用于庞大、复杂并且具有高风险的系统；强调风险分析；结合了瀑布模型和演化模型</li>
+</ul>
+</li>
+<li><p>喷泉模型：以用户需求为动力，以对象作为驱动的模型，适合面向对象的开发方法；支持软件重用和多项开发活动集成的局限性；开发过程具有迭代性和无间隙性 → 开发活动重复多次，不存在明显边界</p>
+<ul>
+<li>优点：提高软件项目的开发效率，节省开发时间</li>
+<li>缺点：开发过程需要大量人员，不利于项目管理；要求严格管理文档，使得审核难度加大</li>
+</ul>
+</li>
+<li><p>统一过程（UP）模型：用例和风险驱动，以架构为中心，迭代并且增量；每个迭代有 5 个核心工作流</p>
+<ol>
+<li>起始阶段：生命周期目标 — 专注于项目的初创活动</li>
+<li>精化阶段：生命周期架构 — 进行需求分析和架构演进</li>
+<li>构建阶段：初始运作功能 — 关注系统的构建，产生实现模型</li>
+<li>移交阶段：产品发布 — 关注于软件提交方面的工作，产生软件增量</li>
+</ol>
+</li>
+<li><p>敏捷方法：尽可能早地、持续地对有价值的软件的交付；每一种方法基于一套原则</p>
+<ul>
+<li><p>极限编程（XP）：轻量级（敏捷）、高效、低风险、柔性、可预测的、科学的软件开发方式</p>
+<ul>
+<li>4 大价值观：沟通、简单性、反馈、勇气</li>
+<li>5 个原则：快速反馈、简单性假设、逐步修改、提倡更改、优质工作</li>
+<li>12 个最佳实践：计划游戏、小型发布、隐喻、简单设计、测试先行、重构、结对编程、集体代码所有制、持续集成、每周工作 40 个小时、现场客户、编码标准</li>
+</ul>
+</li>
+<li><p>水晶法（Crystal）：每一个不同的项目都需要一套不同的策略、约定和方法论</p>
+</li>
+<li><p>并列争求法（Scrum）：每 30 天一次的迭代称为一个 “冲刺”，并按需求的优先级别来实现产品</p>
+</li>
+<li><p>自适应软件开发（ASD）：有 6 个基本原则</p>
+</li>
+<li><p>敏捷统一过程（AUP）：采用 “在大型上连续” “在小型上迭代” 原理构建系统，采用经典的 UP 阶段性活动</p>
+<p>每个 AUP 迭代执行的活动：建模、实现、测试、部署、配置及项目管理、环境管理</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>需求分析</strong>：</p>
+<ul>
+<li>软件需求：功能需求、性能需求、用户或人的因素、环境需求、界面需求、文档需求、数据需求、资源使用需求、安全保密需求、可靠性需求、软件成本消耗与开发进度需求、其他非功能性需求</li>
+</ul>
+<p><strong>系统设计</strong>：</p>
+<ul>
+<li>概要设计<ol>
+<li>设计软件系统总体结构：把一个复杂的系统按功能划分成模块；确定每个模块的功能；确定模块之间的调用关系；确定模块之间的接口</li>
+<li>数据结构及数据库设计<ul>
+<li>数据结构的设计</li>
+<li>数据库的设计：概念设计、逻辑设计、物理设计</li>
+</ul>
+</li>
+<li>编写概要设计文档：概要设计说明书、数据库设计说明书、用户手册、修订测试计划</li>
+<li>评审</li>
+</ol>
+</li>
+<li>详细设计<ol>
+<li>对每个模块进行详细的算法设计</li>
+<li>对模块内的数据结构进行设计</li>
+<li>对数据库进行物理设计</li>
+<li>其他设计：代码设计、输入/输出格式设计、用户界面设计</li>
+<li>编写详细设计说明书</li>
+<li>评审</li>
+</ol>
+</li>
+</ul>
+<p><strong>系统测试</strong>：保证系统质量和可靠性的关键步骤，需要遵循以下基本原则：</p>
+<ol>
+<li>应尽早并不断地进行测试</li>
+<li>测试工作应该避免由原开发软件的人或小组承担</li>
+<li>在设计测试方案时，不仅要确定输入数据，而且要根据系统功能确定预期输出结果</li>
+<li>在设计测试用例时，不仅要设计有效、合理的输入条件，也要包含不合理、失效的输入条件</li>
+<li>在测试程序时，不仅要检验程序是否做了该做的事，还有检验程序是否做了不该做的事</li>
+<li>严格按照测试计划来进行，避免测试的随意性</li>
+<li>妥善保存测试计划、测试用例，作为软件文档的组成部分，为维护提供方便</li>
+<li>测试用例都是精心设计出来的，可以为重新测试或追加测试提供方便</li>
+<li><strong>系统测试阶段的测试目标来自于需求分析阶段</strong></li>
+</ol>
+<p><strong>测试策略</strong>：</p>
+<ul>
+<li>单元测试<ul>
+<li>主要检查 模块缺口、局部数据结构、重要的执行路径、出错处理、边界条件</li>
+<li>驱动模块（主程序）、桩模块（代替子模块，其内部可进行少量的数据处理）</li>
+</ul>
+</li>
+<li>集成测试<ul>
+<li>自顶向下集成测试：不用编写驱动模块，需要编写桩模块</li>
+<li>自底向上集成测试：需要编写驱动模块，不用编写桩模块</li>
+<li>回归测试：软件发生变更后，重新测试，防止变更所带来的错误</li>
+<li>冒烟测试：时间关键项目的决定性机制</li>
+</ul>
+</li>
+<li>确认测试</li>
+<li>系统测试</li>
+</ul>
+<p><strong>测试方法</strong>：</p>
+<ol>
+<li><p>静态测试：被测程序不在机器上运行</p>
+<ul>
+<li>人工测试</li>
+<li>计算机辅助静态分析</li>
+</ul>
+</li>
+<li><p>动态测试：通过运行程序发现错误</p>
+<ul>
+<li><p>黑盒测试（功能测试）：不考虑软件的内部结构和特性</p>
+<ul>
+<li>等价类划分 → 有效等价类（符合规则）、无效等价类（不符合规则）</li>
+<li>边界值分析 → 选取边界值进行测试</li>
+<li>错误推测 → 基于经验和直觉推测程序中的错误</li>
+<li>因果图</li>
+</ul>
+</li>
+<li><p>McCabe 度量法</p>
+<p>有向图 G 的环路复杂性的公式：$V(G)=m-n+2$</p>
+<blockquote>
+<p>其中 V(G)是有向图 G 的环路个数，m 是 G 中的有向弧数（箭头），n 是 G 中的节点数</p>
+</blockquote>
+</li>
+<li><p>白盒测试（结构测试）：根据程序内部结构和逻辑设计测试用例</p>
+<ol>
+<li><p>逻辑覆盖（从弱到强）</p>
+<ul>
+<li><p>语句覆盖：选择足够的测试数据，使得程序中每条语句至少执行一次</p>
+</li>
+<li><p>判定覆盖（分支覆盖）：设计足够的测试用例，使得程序中每个判定表达式至少获得一次“真”和“假”值，或每一个取“真”分支和取“假”分支至少都通过一次</p>
+</li>
+<li><p>条件覆盖：构造一组测试用例，使得每一判定语句中每个逻辑条件的各种可能的值至少满足一次</p>
+</li>
+<li><p>判定/条件覆盖：设计足够的测试用例，使得判定中每个条件的所有可能取值（真/假）至少出现一次，并使每个判定本身的判定结果（真/假）也至少出现一次</p>
+</li>
+<li><p>条件组合覆盖：设计足够的测试用例，使得每个判定中条件的各种可能值的组合都至少出现一次</p>
+<blockquote>
+<p>满足条件组合覆盖的测试用例是一定满足判定覆盖、条件覆盖、判定/条件覆盖的</p>
+</blockquote>
+</li>
+<li><p>路径覆盖：覆盖被测试程序中所有可能的路径</p>
+</li>
+</ul>
+</li>
+<li><p>循环覆盖：执行足够的测试用例，使得循环中的每个条件都得到验证</p>
+</li>
+<li><p>基本路径覆盖：在程序控制流图的基础上通过分析控制流图的环路复杂性，导出基本可执行路径集合</p>
+</li>
+</ol>
+<blockquote>
+<p>白盒测试原则：</p>
+<ol>
+<li>程序模块中的所有独立路径至少执行一次</li>
+<li>在所有的逻辑判断中，取 “真” 和取 “假” 的两种情况至少都能执行一次</li>
+<li>每个循环都应在边界条件和一般条件下各执行一次</li>
+<li>测试程序内部数据结构的有效性等</li>
+</ol>
+</blockquote>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="9-软件工程/image-20241004135812633.png" alt="image-20241004135812633" style="zoom:50%;"></p>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>系统维护概述</strong>：</p>
+<ul>
+<li><p>系统可维护性的评价指标：可理解性、可测试性、可修改性</p>
+</li>
+<li><p>软件与维护文档：软件系统的文档可分为用户文档和系统文档</p>
+<ul>
+<li>文档是软件可维护性的决定因素，高质量文档对于软件产品的效益有着重要意义</li>
+</ul>
+</li>
+<li><p>系统维护</p>
+<ul>
+<li>硬件维护</li>
+<li>软件维护<ol>
+<li>正确性维护：改正系统开发阶段已发生而测试阶段尚未发现的错误</li>
+<li>适应性维护：使应用软件适应信息技术变化和管理需求变化而进行修改</li>
+<li>完善性维护：为扩充功能和改善性能而进行的修改</li>
+<li>预防性维护：为适应环境变化，主动增加预防性的新功能</li>
+</ol>
+</li>
+<li>数据维护</li>
+</ul>
+</li>
+<li><p>软件的质量属性：用 0~1 之间的数来度量</p>
+<ul>
+<li><p>可靠性：一个系统对于给定的时间间隔内、在给定条件下无失效运作的概率</p>
+<p>用$\frac{MTTF}{1+MTTF}$来度量，其中 MTTF 为平均无故障时间</p>
+</li>
+<li><p>可用性：在给定的时间点上，一个系统能够按照规格说明正确运作的概率</p>
+<p>用$\frac{MTBF}{1+MTBF}$来度量，其中 MTBF 为平均失效间隔时间</p>
+</li>
+<li><p>可维护性：在给定的使用条件下，在规定的时间间隔内，使用规定的过程和资源完成维护活动的概率</p>
+<p>用$\frac{1}{1+MTTR}$来度量，其中 MTTR 为平均修复时间</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>沟通路径</strong>（人数为 n 时）：</p>
+<ul>
+<li>无主程序员组：$沟通路径=\frac{(n-1)\times{n}}{2}$</li>
+<li>主程序员组：$沟通路径=n-1$</li>
+</ul>
+<p><strong>软件项目估计</strong>：</p>
+<ul>
+<li>COCOMO 估算模型<ul>
+<li>基本 COCOMO 模型：静态单变量模型</li>
+<li>中级 COCOMO 模型：静态多变量模型</li>
+<li>详细 COCOMO 模型：将软件系统模型分为系统、子系统、模块 3 个层次</li>
+</ul>
+</li>
+<li>COCOMOII 模型<ul>
+<li>应用组装模型 → 对象点</li>
+<li>早期设计阶段模型 → 功能点</li>
+<li>体系结构阶段模型 → 代码行</li>
+</ul>
+</li>
+</ul>
+<p><strong>进度管理</strong>：</p>
+<ul>
+<li><p>Gantt 图（甘特图）：能清晰地描述每个任务从何时开始，到何时结束，任务的进展情况以及各个任务之间的并行性；但不能清晰地反映出各任务之间的依赖关系，难以确定整个项目的关键所在，不能反映计划中有潜力的部分</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">gantt</span><br><span class="line">	title Gantt图实例</span><br><span class="line">	section 任务1</span><br><span class="line">	task1:a1,2008-01-01,180d</span><br><span class="line">	section 任务2</span><br><span class="line">	task2:a1,2008-02-01,270d</span><br><span class="line">	section 任务3</span><br><span class="line">	task3:a1,2008-07-01,150d</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>项目计划评审技术（PERT）图：反映出任务之间的依赖关系，但不能反映任务之间的并行关系</p>
+<ul>
+<li>有向图，箭头表示任务（上面标记完成该任务所需时间），图中结点表示流入（指向）结点的任务结束，并开始流出（指向）结点的任务</li>
+<li>只有当流入该结点的所有任务都结束时，结点所表示的事件才出现，流出结点的任务才可以开始</li>
+<li>最早时刻：在此时刻之前从该事件出发的任务不可能开始</li>
+<li>最迟时刻：从事件出发的任务必须在此时刻之前开始</li>
+<li>松弛时间：在不影响整个工期的前提下完成该任务有多少机动余地</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="9-软件工程/image-20241004210548242.png" alt="image-20241004210548242" style="zoom:50%;"></p>
+<blockquote>
+<p>做题技巧：关键路径选最长时间的路径，$任务N最多可以推迟开始的时间=工期时间-其最长时间路径耗费的时间$</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="9-软件工程/image-20241004212129118.png" alt="image-20241004212129118" style="zoom:50%;"></p>
+</blockquote>
+</li>
+<li><p>项目活动图：顶点表示项目里程碑，连接顶点的边表示活动，边上的值表示完成活动所需的时间</p>
+<p>缩短关键路径上的活动才能缩短整个项目的工期</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="9-软件工程/image-20241005094821448.png" alt="image-20241005094821448" style="zoom:50%;"></p>
+<blockquote>
+<p>关键路径为 A→C→F→G→I，即最长路径；关键路径长度为 4+3+3+7=17；里程碑 A、C、F、G、I 和活动 AC、CF、FG、GI 在关键路径上；活动 FH 的松弛时间是$最迟时刻-最早时刻$，即(17-4-3)-7=3</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>软件配置管理</strong>：</p>
+<ul>
+<li>主要目标：变更标识、变更控制、版本控制、确保变更正确的实现、变更报告</li>
+<li>主要内容<ul>
+<li>版本 1：版本管理、配置支持、变更支持、过程支持、团队支持、变化报告、审计支持</li>
+<li>版本 2：软件配置标识、变更管理、版本控制、系统建立、配置审核、配置状态报告</li>
+</ul>
+</li>
+<li>配置数据库：开发库、受控库、产品库</li>
+</ul>
+<p><strong>风险管理</strong>：</p>
+<ul>
+<li>软件风险：不确定性和损失</li>
+<li>项目风险：项目复杂度、规模及结构不确定性</li>
+<li>技术风险：设计、实现、接口、验证、维护等方面的潜在问题</li>
+<li>商业风险：市场风险、策略风险、销售风险、管理风险、预算风险</li>
+</ul>
+<p>风险识别：建立风险条目检查表</p>
+<p>风险因素：性能、成本、支持、进度</p>
+<p>风险预测（风险估计）：风险预测活动（风险发生的可能性）、评估风险影响（风险发生所产生的后果）</p>
+<p>风险评估：一种对风险评估很有用的技术就是定义风险参照水准</p>
+<p>风险控制：风险避免、风险监控、RMMM 计划（监控和管理计划）</p>
+<p><strong>软件质量特性</strong>：</p>
+<ul>
+<li><p>ISO/IEC 9126 软件质量模型</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="9-软件工程/image-20241005195158509.png" alt="image-20241005195158509" style="zoom:50%;"></p>
+</li>
+<li><p>McCall 软件质量模型：三层模型框架 → 质量特性、评价准则、度量指标</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="9-软件工程/image-20241005200348034.png" alt="image-20241005200348034" style="zoom: 33%;"></p>
+</li>
+</ul>
+<p><strong>软件评审</strong>：</p>
+<ul>
+<li>设计质量<ol>
+<li>评价软件的规格说明是否合乎用户的要求</li>
+<li>评审可靠性，即是否能避免输入异常、硬件失效及软件失效所产生的失效</li>
+<li>评审保密措施实现情况，即是否对系统使用资格进行检查</li>
+<li>评审操作特性实施情况，即操作命令和操作信息的恰当性；输入数据与输入控制语句的恰当性；输出数据的恰当性；应答时间的恰当性等</li>
+<li>评审性能实现情况，即是否达到所规定性能的目标值</li>
+<li>评审软件是否具有可修改性、可扩充性、可互换性和可移植性</li>
+<li>评审软件是否具有可测试性</li>
+<li>评审软件是否具有复用性</li>
+</ol>
+</li>
+<li>程序质量<ol>
+<li>功能结构：数据结构、功能结构、数据结构与功能结构之间的对应关系</li>
+<li>功能的通用性</li>
+<li>模块的层次</li>
+<li>模块结构：控制流结构、数据流结构、模块结构与功能结构之间的对应关系</li>
+<li>处理过程的结构</li>
+</ol>
+</li>
+<li>与运行环境的接口<ol>
+<li>与硬件的接口</li>
+<li>与用户的接口</li>
+</ol>
+</li>
+<li>正式技术评审：揭露质量问题，发现软件中的错误</li>
+</ul>
+<p><strong>软件容错技术</strong>：</p>
+<ul>
+<li>结构冗余：静态冗余、动态冗余、混合冗余</li>
+<li>信息冗余：为检测或纠正信息在运算或传输中的错误需外加一部分信息</li>
+<li>时间冗余：以重复执行指令或程序来消除瞬时错误带来的影响</li>
+<li>冗余附加技术<ul>
+<li>在屏蔽硬件错误的容错技术中：<ul>
+<li>关键程序和数据的冗余存储及调用；检测、表决、切换、重构、纠错和复算的实现</li>
+</ul>
+</li>
+<li>在屏蔽软件错误的容错系统中：<ul>
+<li>冗余备份程序的存储及调用；实现错误检测和错误恢复的程序；实现容错软件所需的固化程序</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>软件工具</strong>：</p>
+<ul>
+<li>软件开发工具：需求分析工具、设计工具、编码与排错工具、测试工具</li>
+<li>软件维护工具：版本控制工具、文档分析工具、开发信息库工具、逆向工程工具、再工程工具</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://raysolid.github.io">Ray</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://raysolid.github.io/2024/12/03/9-%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/">https://raysolid.github.io/2024/12/03/9-软件工程/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://raysolid.github.io" target="_blank">Ray</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%BD%AF%E8%80%83/">软考</a><a class="post-meta__tags" href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/">软件工程</a></div><div class="post-share"><div class="social-share" data-image="https://sourcebucket.s3.bitiful.net/img/default_cover_233.webp" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2024/12/01/8-%E7%BB%93%E6%9E%84%E5%8C%96%E5%BC%80%E5%8F%91/" title="8-结构化开发"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.bitiful.net/img/default_cover_191.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">8-结构化开发</div></div><div class="info-2"><div class="info-item-1">8. 结构化开发 -...</div></div></div></a><a class="pagination-related" href="/2024/12/03/10-%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/" title="10-信息安全"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.bitiful.net/img/default_cover_37.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">10-信息安全</div></div><div class="info-2"><div class="info-item-1">10. 信息安全 - 软件设计师防火墙：通常分为内网、DMZ（公用服务器）、外网三个区域  包过滤防火墙  对用户完全透明，速度较快；不能防范黑客攻击 实行低水平控制，检查源地址、目的地址、协议、端口等   应用代理网关防火墙  彻底隔离内网与外网的直接通信，所有通信都必须经应用层代理软件转发  优点：检查应用层、传输层、网络层的协议特征，对数据包的检测能力比较强  缺点：难以配置，处理速度非常慢   状态检测技术防火墙  结合了代理防火墙的安全性和包过滤防火墙的高速度等优点，在不损失安全性的基础上，提高了代理防火墙的性能    病毒： 计算机病毒的特征：传播性、隐蔽性、感染性、潜伏性、触发性、破坏性等  蠕虫病毒（Worm）：欢乐时光、熊猫烧香、红色代码、爱虫病毒、震网 特洛伊木马（Trojan）：木马软件 → 冰河 后门病毒（Backdoor） 宏病毒（Macro）：感染对象主要是文本文档、电子表格等  网络攻击：  拒绝服务攻击（Dos...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2024/12/03/11-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" title="11-计算机网络"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.bitiful.net/img/default_cover_210.webp" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-12-03</div><div class="info-item-2">11-计算机网络</div></div><div class="info-2"><div class="info-item-1">11. 计算机网络 - 软件设计师网络设备：  物理层的互连设备：中继器、集线器（多端口中继器） 数据链路层的互连设备：网桥、交换机（多端口网桥） 网络层互连设备：路由器 应用层互连设备：网关      能否隔离 广播域 冲突域     物理层 × ×   数据链路层 × √   网络层 √ √      物理层的所有端口组成 1 个冲突域和 1 个广播域；数据链路层的 n 个端口形成 1 个广播域和 n 个冲突域  协议簇：   所有带 T 的除了 TFTP 其他都是 TCP，所有不带 T 的除了 POP3 其他都是 UDP 协议和层次对应关系题，先排除带 ARP 的  网际层协议：  IP：不可靠的、无连接的  传输层协议：  TCP：可靠的、面向连接的、全双工的数据传输服务；三次握手协议 可靠连接、连接管理、差错校验和重传、流量控制（可变大小的滑动窗口协议）、拥塞控制、端口寻址   UDP：不可靠的、无连接的协议；提高传输的高速率性  电子邮件： E-mail 系统基于客户端/服务器模式 E-mail 服务器主要采用 SMTP（简单邮件传输协议），传输 ASCII...</div></div></div></a><a class="pagination-related" href="/2024/11/26/1-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/" title="1-计算机系统"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.bitiful.net/img/default_cover_251.webp" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-11-26</div><div class="info-item-2">1-计算机系统</div></div><div class="info-2"><div class="info-item-1">1. 计算机系统 - 软件设计师计算机的基本硬件系统组成：  运算器 控制器 存储器 输入设备 输出设备  CPU 的功能：  程序控制 操作控制 时间控制 数据处理   1、2、3 属于控制器，4 属于运算器  运算器的组成：  算术逻辑单元（ALU）：实现算术运算、逻辑运算 累加寄存器（AC）：存放操作数或运算结果 数据缓冲寄存器（DR） 状态条件寄存器（PSW）  控制器的组成：  指令寄存器（IR）：存放当前执行的指令 程序计数器（PC）：存放下一条执行指令的地址，有自动加 1 功能 地址寄存器（AR） 指令译码器（ID）  $指令 = 操作码 + 地址码$ 存储器：寄存器 → Cache（高速缓冲存储器） → 主存（内存） → 辅存 → 外存  速度快 → 慢，容量小 → 大，价格高 → 低  计算机基本单位：     单位 表示 转换     位（比特） bit / b    字节 byte /...</div></div></div></a><a class="pagination-related" href="/2024/12/03/10-%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/" title="10-信息安全"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://sourcebucket.s3.bitiful.net/img/default_cover_37.webp" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-12-03</div><div class="info-item-2">10-信息安全</div></div><div class="info-2"><div class="info-item-1">10. 信息安全 - 软件设计师防火墙：通常分为内网、DMZ（公用服务器）、外网三个区域  包过滤防火墙  对用户完全透明，速度较快；不能防范黑客攻击 实行低水平控制，检查源地址、目的地址、协议、端口等   应用代理网关防火墙  彻底隔离内网与外网的直接通信，所有通信都必须经应用层代理软件转发  优点：检查应用层、传输层、网络层的协议特征，对数据包的检测能力比较强  缺点：难以配置，处理速度非常慢   状态检测技术防火墙  结合了代理防火墙的安全性和包过滤防火墙的高速度等优点，在不损失安全性的基础上，提高了代理防火墙的性能    病毒： 计算机病毒的特征：传播性、隐蔽性、感染性、潜伏性、触发性、破坏性等  蠕虫病毒（Worm）：欢乐时光、熊猫烧香、红色代码、爱虫病毒、震网 特洛伊木马（Trojan）：木马软件 → 冰河 后门病毒（Backdoor） 宏病毒（Macro）：感染对象主要是文本文档、电子表格等  网络攻击：  拒绝服务攻击（Dos...</div></div></div></a><a class="pagination-related" href="/2024/12/06/13-%E7%AE%97%E6%B3%95/" title="13-算法"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://picx.zhimg.com/v2-2510e4b2723aa97937b80efc3faeff93_1440w.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-12-06</div><div class="info-item-2">13-算法</div></div><div class="info-2"><div class="info-item-1">13. 算法 - 软件设计师回溯法：  深度优先  N 皇后问题：在 N×N 的棋盘上摆放 N 个皇后，并且满足 N 个皇后中任意两个皇后都不处于同一行、同一列、同一斜线（正斜线、反斜线）上，，对于皇后 $Q_i$ 和皇后 $Q_j$ ：  判断是否位于同一列：Q_{i列}=Q_{j列} 判断是否位于同一斜线：|Q_{i行}-Q_{j行}|=|Q_{i列}-Q_{j列}|   对于下图，方案 1：2,4,1,3 方案 2：3,1,4,2 数字表示当前皇后位于第几列     分治法：分解 → 求解 → 合并   归并排序（递归）：由  T(n)=\left\{     \begin{array}{l}         O(1)\qquad\qquad\qquad n\leq{1} \\         2T(\frac{n}{2})+O(n)\qquad n>1     \end{array} \right.解得 $T(n)=O(nlogn)$  最大子段和：序列中所有整数均为负整数时，其最大字段和为 0   动态规划：全局最优解，① 最优子结构 ② 重叠子问题  0-1...</div></div></div></a><a class="pagination-related" href="/2024/12/05/12-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="12-数据结构"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic2.zhimg.com/v2-f6c07d54e218802e9a79efc40b753d07_1440w.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-12-05</div><div class="info-item-2">12-数据结构</div></div><div class="info-2"><div class="info-item-1">12. 数据结构 - 软件设计师大 O 表示法：  O(1)</div></div></div></a><a class="pagination-related" href="/2024/11/26/2-%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83/" title="2-知识产权"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic2.zhimg.com/v2-f6c07d54e218802e9a79efc40b753d07_1440w.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-11-26</div><div class="info-item-2">2-知识产权</div></div><div class="info-2"><div class="info-item-1">2. 知识产权 - 软件设计师 工业产权（专利、商标） 著作权（不限期） 人身权（发表权、署名权、修改权、保护作品完整权） 财产权    计算机软件著作权：《中华人民共和国著作权法》和《计算机软件保护条例》  计算机程序：源程序、目标程序 计算机软件的文档：程序设计说明书、流程图、用户手册等  职务软件作品，受雇人员享有署名权，企业公司享有著作权 委托开发软件著作权的归属：  根据签订书面合同约定 若无合同，则著作权由受委托人享有  商业秘密权：对软件的技术信息、经营信息提供保护 专利权：有两人以上时，先申请人先获得；若同时申请，则协商确定一个 商标权：保护期限可以延长 商标注册：先注册先得；同一天注册，先使用先得，若都没使用过则协商 </div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.rongyuejiaoyu.com/uploads/20240728/02511242750.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Ray</div><div class="author-info-description">分享学习心得，记录生活点滴。</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">14</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Raysolid"><i class="fab fa-github"></i><span>前往Github</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/Raysolid" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:y1515968124@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎光临，如果能帮助到你是我荣幸，请给我一个Star！</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#9-%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B-%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88"><span class="toc-number">1.</span> <span class="toc-text">9. 软件工程 - 软件设计师</span></a></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By Ray</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>(() => {
+  const loadMathjax = () => {
+    if (!window.MathJax) {
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          tags: 'none',
+        },
+        chtml: {
+          scale: 1.1
+        },
+        options: {
+          enableMenu: true,
+          renderActions: {
+            findScript: [10, doc => {
+              for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+                const display = !!node.type.match(/; *mode=display/)
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+                const text = document.createTextNode('')
+                node.parentNode.replaceChild(text, node)
+                math.start = {node: text, delim: '', n: 0}
+                math.end = {node: text, delim: '', n: 0}
+                doc.math.push(math)
+              }
+            }, '']
+          }
+        }
+      }
+
+      const script = document.createElement('script')
+      script.src = 'https://cdn.jsdelivr.net/npm/mathjax/es5/tex-mml-chtml.min.js'
+      script.id = 'MathJax-script'
+      script.async = true
+      document.head.appendChild(script)
+    } else {
+      MathJax.startup.document.state(0)
+      MathJax.texReset()
+      MathJax.typesetPromise()
+    }
+  }
+
+  btf.addGlobalFn('encrypt', loadMathjax, 'mathjax')
+  window.pjax ? loadMathjax() : window.addEventListener('load', loadMathjax)
+})()</script></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="30" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div><!-- hexo injector body_end start --> <script data-pjax>if(document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+    var parent = document.getElementById('recent-posts');
+    var child = '<div class="recent-post-item" style="width:100%;height: auto"><div id="catalog_magnet"><div class="magnet_item"><a class="magnet_link" href="https://raysolid.github.io/categories/软考/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🎓 软件设计师笔记 (13)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item" style="visibility: hidden"></div><a class="magnet_link_more"  href="https://raysolid.github.io/categories" style="flex:1;text-align: center;margin-bottom: 10px;">查看更多...</a></div></div>';
+    console.log('已挂载magnet')
+    parent.insertAdjacentHTML("afterbegin",child)}
+     </script><style>#catalog_magnet{flex-wrap: wrap;display: flex;width:100%;justify-content:space-between;padding: 10px 10px 0 10px;align-content: flex-start;}.magnet_item{flex-basis: calc(50% - 5px);background: #f2f2f2;margin-bottom: 10px;border-radius: 8px;transition: all 0.2s ease-in-out;}.magnet_item:hover{background: #49b1f5}.magnet_link_more{color:#555}.magnet_link{color:black}.magnet_link:hover{color:white}@media screen and (max-width: 600px) {.magnet_item {flex-basis: 100%;}}.magnet_link_context{display:flex;padding: 10px;font-size:16px;transition: all 0.2s ease-in-out;}.magnet_link_context:hover{padding: 10px 20px;}</style>
+    <style></style><script data-pjax>
+  function butterfly_swiper_injector_config(){
+    var parent_div_git = document.getElementById('recent-posts');
+    var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2024/12/01/6-设计模式/" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic3.zhimg.com/v2-6da72d2f835a2790fc5e597a6ab50630_1440w.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2024-12-01</span><a class="blog-slider__title" href="2024/12/01/6-设计模式/" alt="">6-设计模式</a><div class="blog-slider__text">设计模式相关考点（重点）</div><a class="blog-slider__button" href="2024/12/01/6-设计模式/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2024/12/05/12-数据结构/" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pic2.zhimg.com/v2-f6c07d54e218802e9a79efc40b753d07_1440w.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2024-12-05</span><a class="blog-slider__title" href="2024/12/05/12-数据结构/" alt="">12-数据结构</a><div class="blog-slider__text">数据结构相关考点（重点）</div><a class="blog-slider__button" href="2024/12/05/12-数据结构/" alt="">详情   </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载butterfly_swiper')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'undefined'.split(',');
+  var cpage = location.pathname;
+  var epage = '/';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_swiper_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_swiper_injector_config();
+  }
+  </script><script defer src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js"></script><!-- hexo injector body_end end --></body></html>
