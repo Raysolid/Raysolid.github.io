@@ -1,0 +1,37 @@
+[data-theme='dark'] {
+  --article-card-color: #10c6dc;
+}
+[data-theme='light'] {
+  --article-card-color: #94f6df;
+}
+
+.recent-post-item:hover {
+  box-shadow: 0 0 0 3px var(--article-card-color) !important;
+}
+.card-widget.card-info:hover {
+  box-shadow: 0 0 0 3px var(--article-card-color) !important;
+}
+
+.card-widget.card-announcement:hover {
+  box-shadow: 0 0 0 3px var(--article-card-color) !important;
+}
+
+.card-widget.card-recent-post:hover {
+  box-shadow: 0 0 0 3px var(--article-card-color) !important;
+}
+
+.card-widget.card-categories:hover {
+  box-shadow: 0 0 0 3px var(--article-card-color) !important;
+}
+
+.card-widget.card-tags:hover {
+  box-shadow: 0 0 0 3px var(--article-card-color) !important;
+}
+
+.card-widget.card-archives:hover {
+  box-shadow: 0 0 0 3px var(--article-card-color) !important;
+}
+
+.card-widget.card-webinfo:hover {
+  box-shadow: 0 0 0 3px var(--article-card-color) !important;
+}
